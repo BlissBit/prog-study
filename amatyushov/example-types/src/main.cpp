@@ -3,7 +3,7 @@
 #include <limits>
 int main()
 {
-	std::wcout << "********************** Integer type **********************" << std::endl;
+	std::cout << "********************** Integer type **********************" << std::endl;
 	std::cout << "short: " << sizeof(short) << " bytes,"
 		<< " min: " << std::numeric_limits<short>::min() << " max: "
 		<< std::numeric_limits<short>::max() << std::endl;
@@ -101,7 +101,7 @@ int main()
 	}
 	std::cout << std::endl;*/
 
-	std::wcout << "********************** Integer STL Data Types **********************" << std::endl;
+	std::cout << "********************** Integer STL Data Types **********************" << std::endl;
 
 	std::cout << "int8_t: " << sizeof(int8_t) << " bytes,"
 		<< " min: " << std::to_string(std::numeric_limits<int8_t>::min())

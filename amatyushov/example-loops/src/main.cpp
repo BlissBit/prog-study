@@ -1,18 +1,7 @@
 ﻿#include <iostream>
-#ifdef WIN32
-#include <io.h>
-#include <fcntl.h>
-#else
-#include <clocale>
-#endif
 
 int main()
 {
-#ifdef WIN32
-    _setmode(_fileno(stdout), _O_U16TEXT);
-#else	
-	setlocale(LC_CTYPE, "");
-#endif
 	// loop for
 	int sum = 0;
     for (int i = 0; i <= 1000; i++)
@@ -22,7 +11,7 @@ int main()
     		sum += i;
     	}
     }
-    std::wcout << L"Сумма чётных чисел от 0 до 1000 = " << sum << std::endl;
+    std::cout << "Sum of even numbers from 0 to 1000 = " << sum << std::endl;
 
 	// loop	while
 	int current_num = 1000;
@@ -35,7 +24,7 @@ int main()
 		}
 		current_num--;
 	}
-	std::wcout << L"Сумма нечётных чисел от 0 до 1000 = " << sum << std::endl;
+	std::wcout << "Sum of odd numbers from 0 to 1000 = " << sum << std::endl;
 
 	//loop do while
 	std::wstring str(L"STALKER");
