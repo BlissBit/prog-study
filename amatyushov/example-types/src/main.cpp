@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <limits>
 int main()
 {
 	std::wcout << "********************** Integer type **********************" << std::endl;

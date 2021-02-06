@@ -4,7 +4,6 @@
 #include <fcntl.h>
 #else
 #include <clocale>
-#include <limits>
 #endif
 
 int main()
