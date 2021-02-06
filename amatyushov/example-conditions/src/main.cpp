@@ -3,7 +3,7 @@
 int main()
 {
 
-    int x{};
+    int x = 0;
     std::cout << "Enter x: ";
     std::cin >> x;
     if (x > 50)
