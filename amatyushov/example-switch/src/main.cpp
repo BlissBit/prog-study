@@ -10,7 +10,7 @@ enum types
 int main()
 {
 	std::cout << "switch example" << std::endl;
-	const types num = first;
+	const types num = types::first;
 	switch (num)
 	{
 		case types::first:
