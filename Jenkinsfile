@@ -1,5 +1,7 @@
 def devBranch = "develop"
 
+@Library('jenkins-utils-lib') _
+
 pipeline
 {
 	agent none
@@ -29,9 +31,9 @@ pipeline
 								buildWithParams()
 							}
 						}
-						post
+						stage('cleanup')
 						{
-							cleanup
+							steps
 							{
 								deleteDir()
 							}
