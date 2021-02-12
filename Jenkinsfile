@@ -7,26 +7,29 @@ pipeline
 	{
 		stage ('Build Prog Study')
 		{
-			stage('Windows x64')
+			parallel
 			{
-				agent
+				stage('Windows x64')
 				{
-					label 'win-build-node'
-				}
-				stages
-				{
-					stage('Build Win64 Release')
+					agent
 					{
-						steps
-						{
-							buildWithParams()
-						}
+						label 'win-build-node'
 					}
-					stage('cleanup')
+					stages
 					{
-						steps
+						stage('Build Win64 Release')
 						{
-							deleteDir()
+							steps
+							{
+								buildWithParams()
+							}
+						}
+						stage('cleanup')
+						{
+							steps
+							{
+								deleteDir()
+							}
 						}
 					}
 				}
