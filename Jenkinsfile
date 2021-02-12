@@ -2,44 +2,32 @@ def devBranch = "develop"
 
 pipeline
 {
-	agent none
-	options
+	stage ('Build Prog Study')
 	{
-		buildDiscarder(logRotator(numToKeepStr: getKeepBuilds()))
-		timestamps ()
-	}
-	stages
-	{
-		stage ('Build Prog Study')
+		stage('Windows x64')
 		{
-			parallel
+			agent
 			{
-				stage('Windows x64')
+				label 'win-build-node'
+			}
+			stages
+			{
+				stage('Build Win64 Release')
 				{
-					agent
+					steps
 					{
-						label 'win-build-node'
+						buildWithParams()
 					}
-					stages
+				}
+				stage('cleanup')
+				{
+					steps
 					{
-						stage('Build Win64 Release')
-						{
-							steps
-							{
-								buildWithParams()
-							}
-						}
-						stage('cleanup')
-						{
-							steps
-							{
-								deleteDir()
-							}
-						}
+						deleteDir()
 					}
 				}
 			}
-		}
+		}	
 	}
 }
 
