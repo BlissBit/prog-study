@@ -6,6 +6,7 @@ int main()
     int x = 0;
     std::cout << "Enter x: ";
     std::cin >> x;
+
     if (x > 50)
     {
         std::cout << "x is greater than 50 \n";

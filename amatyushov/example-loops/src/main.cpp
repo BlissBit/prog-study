@@ -12,7 +12,7 @@ int main()
     	}
     }
     std::cout << "Sum of even numbers from 0 to 1000 = " << sum << std::endl;
-
+	
 	// loop	while
 	int current_num = 1000;
 	sum = 0;
