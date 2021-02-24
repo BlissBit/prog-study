@@ -28,6 +28,9 @@ int main()
 	{
 		std::cout << "You entering: " << str << std::endl;
 	}
+    std::string str;
+    std::cout << "Enter string: "; // сказал же, не вводить слово "хуй"
+    std::cin >> str;
 
 	
     std::cout << "End of Program" << "\n";
