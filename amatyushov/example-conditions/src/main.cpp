@@ -17,7 +17,7 @@ int main()
     }
 
     std::string str;
-    std::cout << "Enter string: "; // no flush needed
+    std::cout << "Enter string: "; // не хуй вводить слово "хуй"
     std::cin >> str;
 	
 	if (str.empty())
