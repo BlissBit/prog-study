@@ -1,13 +1,15 @@
 #include <iostream>
 #include <string>
 #include <limits>
+
 int main()
 {
 	std::cout << "********************** Integer type **********************" << std::endl;
+	// short 
 	std::cout << "short: " << sizeof(short) << " bytes,"
 		<< " min: " << std::numeric_limits<short>::min() << " max: "
 		<< std::numeric_limits<short>::max() << std::endl;
-
+	//int	
 	std::cout << "int: " << sizeof(int) << " bytes,"
 		<< " min: " << std::numeric_limits<int>::min() << " max: "
 		<< std::numeric_limits<int>::max() << std::endl;
@@ -84,7 +86,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	/*_setmode(_fileno(stdout), _O_U16TEXT);
+	/_setmode(_fileno(stdout), _O_U16TEXT);
 
 
 	wchar_t m_example_wchar = 'a';
