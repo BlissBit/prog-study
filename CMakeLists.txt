@@ -7,3 +7,4 @@ project (prog-study VERSION 1.0.0)
 
 # Include sub-projects.
 add_subdirectory (amatyushov)
+add_subdirectory (aivanov)
