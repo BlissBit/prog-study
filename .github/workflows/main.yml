@@ -2,7 +2,7 @@
 
 name: CI
 
-on: [ pull_request, pull ]
+on: [pull_request]
 
 jobs:
   cpp_style_check:
