@@ -3,4 +3,3 @@ file(GLOB HEADERS "*.hpp")
 
 
 add_executable(example-conditions ${SOURCES} ${HEADERS})
-
