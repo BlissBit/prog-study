@@ -5,16 +5,16 @@
 
 int main()
 {
-	std::srand(unsigned int(time(0)));
-	// std::random_device rd;
-	// std::mt19937_64 mersene(rd());
-	// mersene();
+	std::srand( unsigned int(time(0)) );
+	std::random_device rd;
+	std::mt19937_64 mersene(rd());
+	mersene();
 
 	int arr[10] = {};
 
 	for (int index = 9; index > 0; index--)
 	{
-		arr[index] = rand();
+		arr[index] = mersene();
 		std::cout << arr[index] << " ";
 	}
 
