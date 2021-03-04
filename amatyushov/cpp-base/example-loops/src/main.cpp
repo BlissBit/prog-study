@@ -5,7 +5,7 @@
 
 int main()
 {
-	std::srand( unsigned int(time(0)) );
+	std::srand(std::int32_t(time(0)));
 	std::random_device rd;
 	std::mt19937_64 mersene(rd());
 	mersene();
