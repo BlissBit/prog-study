@@ -9,10 +9,10 @@ int main()
 	// std::random_device rd;
 	// std::mt19937_64 mersene(rd());
 	// mersene();
-	
+
 	int arr[10] = {};
 
-	for(int index = 9; index > 0; index--)
+	for (int index = 9; index > 0; index--)
 	{
 		arr[index] = rand();
 		std::cout << arr[index] << " ";
@@ -44,25 +44,25 @@ int main()
 	}
 
 	std::cout << "Sum = " << sum << std::endl;
-	
+
 	const int arr_size = 1000;
 
 	int array[arr_size];
 
 	for (int index = 0; index < arr_size; index++)
 	{
-		sum += index;	
+		sum += index;
 		if (index == 500)
 		{
 			break;
 		}
 	}
 	/*
-	* бесконечнй for	
-	for (;;)
-	{
-		
-	}
+	 * бесконечнй for
+	    for (;;)
+	    {
+
+	    }
 	 */
 	// loop	while
 	int current_num = 1000;
@@ -77,7 +77,6 @@ int main()
 	}
 	std::wcout << "Sum of odd numbers from 0 to 1000 = " << sum << std::endl;
 
-	
 	// loop do while
 	std::wstring str(L"STALKER");
 	int index = 0;
@@ -87,6 +86,6 @@ int main()
 		index++;
 	}
 	while (index < str.size());
-	
+
 	return 0;
 }
