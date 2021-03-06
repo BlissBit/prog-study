@@ -1,6 +1,6 @@
 #include <iostream>
 #include <random>
-#include <vector>
+#include <algorithm>
 #include "../headers/Vectors.hpp"
 
 namespace myVector
