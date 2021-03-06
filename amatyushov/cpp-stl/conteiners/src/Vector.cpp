@@ -1,11 +1,9 @@
 #include <iostream>
 #include <random>
+#include <vector>
 #include "../headers/Vectors.hpp"
 
 namespace myVector
-{
-
-namespace
 {
 
 void delElemVector(std::vector<int>& v, std::uint16_t delElem)
@@ -43,7 +41,6 @@ void showVector()
 
 	delElemVector(vect, 3);
 	coutVector(vect);
-}
 
 }
 
