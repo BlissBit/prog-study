@@ -11,8 +11,9 @@ int main()
 	{
 		while (!(std::cin >> n))
 		{
-			isPrime = false;
-			break;
+			std::cin.clear();
+			std::cin.ignore(std::cin.rdbuf()->in_avail());
+			std::cout << "Input error, try again\n";
 		}
 		int(i);
 
