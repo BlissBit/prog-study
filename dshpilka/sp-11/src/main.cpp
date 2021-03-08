@@ -15,7 +15,7 @@ int main()
 			std::cin.ignore(std::cin.rdbuf()->in_avail());
 			std::cout << "Input error, try again\n";
 		}
-		int(i);
+		int i{};
 
 		for (i = 2; i <= (std::sqrt(std::abs(n))); i++)
 		{
