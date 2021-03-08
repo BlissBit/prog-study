@@ -3,7 +3,7 @@
 
 int main()
 {
-	int (n);
+	int n{};
 	bool isPrime = true;
 
 	std::cout << "Please enter an integer ";
