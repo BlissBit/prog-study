@@ -11,6 +11,8 @@ CTestTestfile.cmake
 _deps
 out/
 build/
+cmake-build*/
 .vs/
 .vscode/
+.idea/
 CMakeSettings.json
