@@ -6,12 +6,12 @@ int main()
 
 	std::cout << "Enter your number: ";
 	std::cin >> number;
-
+/*
 	std::string str_number = std::to_string(number);
 	str_number.reserve();
 	int reverse{};
 	reverse = std::stoi(str_number);
-	
+*/	
 	for (int i = 1; i < 100; ++i)
 	{
 		int current_div = pow(10, i);
@@ -22,7 +22,7 @@ int main()
 		}
 	}
 
-	reverse = 0;
+	int reverse = 0;
 	int temp_number = number;
 	for (int i = 1; i <= size_of_number; ++i)
 	{
@@ -39,6 +39,10 @@ int main()
 	if (reverse == number)
 	{
 		std::cout << number << " is palindrom" << std::endl;
+	}
+	else 
+	{
+		std::cout << " is not palindrom" << std::endl;
 	}
 
 	return 0;
