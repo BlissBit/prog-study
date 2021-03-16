@@ -1,5 +1,9 @@
 #include <iostream>
+/*
 #include <string>
+*/
+#include <cmath>
+
 int main()
 {
 	int size_of_number{}, number{};
