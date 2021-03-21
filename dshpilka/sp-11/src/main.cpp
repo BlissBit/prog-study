@@ -4,36 +4,39 @@
 int main()
 {
 	int n{};
-	bool isPrime = true;
-
-	std::cout << "Please enter an integer ";
-	std::cin >> n;
+	bool is_not_prime = true;
+	bool is_inf_input = true;
+	while(is_inf_input)
 	{
-		while (!(std::cin >> n))
+		std::cout << "Please enter an integer ";
+		
+		while (!(std::cin >> n).good())
 		{
 			std::cin.clear();
 			std::cin.ignore(std::cin.rdbuf()->in_avail());
 			std::cout << "Input error, try again\n";
+			is_inf_input = false;
+			break;
 		}
-		int i{};
 
-		for (i = 2; i <= (std::sqrt(std::abs(n))); i++)
+		for (auto i = 2; i <= (std::sqrt(std::abs(n))); i++)
 		{
 			if (n % i == 0)
 			{
-				isPrime = false;
+				is_not_prime = false;
 				break;
+			}
+
+			if (is_not_prime)
+			{
+				std::cout << "This is a prime number" << std::endl;
+			}
+			else
+			{
+				std::cout << "This is a complex number" << std::endl;
 			}
 		}
 	}
-	if (isPrime)
-	{
-		std::cout << "This is a prime number" << std::endl;
-	}
-	else
-	{
-		std::cout << "This is a complex number" << std::endl;
-	}
-
+	
 	return 0;
 }
