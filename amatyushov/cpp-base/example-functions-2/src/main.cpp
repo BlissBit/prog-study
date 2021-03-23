@@ -14,6 +14,8 @@ void task_for1()
 	if (!(a < b))
 	{
 		std::cout << "not valid data";
+		// функция ничего не возвращает, поэтому пишем просто return;
+		return;
 	}
 
 	for (int i = a; i <=b; ++i)
