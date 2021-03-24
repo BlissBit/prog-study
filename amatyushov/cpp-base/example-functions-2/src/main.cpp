@@ -45,5 +45,6 @@ int main()
 	task_for1();
 	task_for2();
 	task_3::example_task3();
+	task_3::example_task4();
 	return 0;
 }
