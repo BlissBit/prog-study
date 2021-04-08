@@ -297,9 +297,48 @@ int recursion_chek_pow2(int n)
 /// </summary>
 /// <returns></returns>
 
-void task_recursion3()
-{
+int recursion_from_right_to_left(int n);
 
+void task_recursion_from_right_to_left()
+{
+	int n{}, temp_n{};
+
+	std::cout << "Enter n = ";
+	std::cin >> n;
+
+	recursion_from_right_to_left(n);
+}
+
+int recursion_from_right_to_left(int n)
+{
+	std::cout << n % 10 << " ";
+
+	if (n < 10)
+	{
+		return n;
+	}
+	if (n /= 10)
+	{
+		recursion_from_right_to_left(n);
+	}
+}
+
+
+int recursion_from_left_to_right(int n);
+
+void task_recursion_from_left_to_right()
+{
+	int n{};
+
+	std::cout << "Enter n = ";
+	std::cin >> n;
+
+	recursion_from_left_to_right(n);
+}
+
+int recursion_from_left_to_right(int n)
+{
+	
 }
 
 int main()
@@ -315,8 +354,9 @@ int main()
 	//int fib = fibonachi(13);
 	//task_recursion();
 	//task_while_chek_pow2();
-	task_recursion_chek_pow2();
-	//task_recursion3();
-
+	//task_recursion_chek_pow2();
+	task_recursion_from_right_to_left();
+	//task_recursion_from_left_to_right();
+	
 	return 0;
 }
