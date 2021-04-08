@@ -260,28 +260,35 @@ void task_while_chek_pow2()
 	}
 }
 
-int is_power_2(int n)
+int recursion_chek_pow2(int n);
 
-void task_recursion2()
+void task_recursion_chek_pow2()
 {
-	for (int n = 1; n > 0; n++)
-	{
-		if (is_power_2(n))
-		{
-			std::cout << n << std::endl;
-		}
-	}
+	int n{};
+
+	std::cout << "Enter n = ";
+	std::cin >> n;
+
+	recursion_chek_pow2(n);
 }
 
-int is_power_2(int n)
+int recursion_chek_pow2(int n)
 {
-	if (!(n % 2))
+	if (n / 1 == 2)
 	{
-		return is_power_2(n / 2);
+		std::cout << "Yes";
 	}
-	else
+	if (n % 2 == 0)
 	{
-		return n == 1;
+		if (n > 2)
+		{
+			return recursion_chek_pow2(n / 2);
+		}
+	}
+
+	if (n / 1 != 2)
+	{
+		std::cout << "No";
 	}
 }
 
@@ -308,7 +315,7 @@ int main()
 	//int fib = fibonachi(13);
 	//task_recursion();
 	//task_while_chek_pow2();
-	task_recursion2()
+	task_recursion_chek_pow2();
 	//task_recursion3();
 
 	return 0;
