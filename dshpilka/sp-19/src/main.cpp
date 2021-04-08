@@ -39,7 +39,7 @@ void task_palindrome()
 
 int main()
 {
-	//task_palindrome();
+	task_palindrome();
 
 	return 0;
 }
