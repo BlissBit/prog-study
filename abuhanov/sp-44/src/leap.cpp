@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int year;
+    int year{};
     cout << "Enter year\n";
     cin >> year;
     
