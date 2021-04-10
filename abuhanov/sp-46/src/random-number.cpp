@@ -13,14 +13,14 @@ int main()
     {
         std::cout << "Enter envisioned number " << std::endl;
         std::cin >> answer;
-            if (n > answer) 
-            {
-                std::cout << "The number is bigger than you enter " << std::endl;
-            }
-            else if (n < answer) 
-            {
-                std::cout << "The number is smaller than you enter " << std::endl;
-            }
+        if (n > answer) 
+        {
+            std::cout << "The number is bigger than you enter " << std::endl;
+        }
+        if (n < answer) 
+        {
+            std::cout << "The number is smaller than you enter " << std::endl;
+        }
     }
     while (n != answer);
     std::cout << "You guessed ! " << std::endl;
