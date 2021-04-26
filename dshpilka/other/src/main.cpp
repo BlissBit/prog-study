@@ -301,7 +301,7 @@ int recursion_from_right_to_left(int n);
 
 void task_recursion_from_right_to_left()
 {
-	int n{}, temp_n{};
+	int n{};
 
 	std::cout << "Enter n = ";
 	std::cin >> n;
@@ -324,7 +324,24 @@ int recursion_from_right_to_left(int n)
 }
 
 
-int recursion_from_left_to_right(int n);
+void recursion_from_left_to_right(int n);
+
+int get_size_number(int n)
+{
+	int size{1};
+
+	while (true)
+	{
+		int current_div = pow(10, size);
+		if (n % current_div == n)
+		{
+			return size;
+		}
+
+		size++;
+
+	}
+}
 
 void task_recursion_from_left_to_right()
 {
@@ -336,9 +353,20 @@ void task_recursion_from_left_to_right()
 	recursion_from_left_to_right(n);
 }
 
-int recursion_from_left_to_right(int n)
+void recursion_from_left_to_right(int n)
 {
-	
+	if (n == 0)
+	{
+		return;
+	}
+
+	int size = get_size_number(n);
+
+	int temp = n % int (pow(10, size - 1));
+
+	std::cout << int((n - temp) / pow(10, size - 1)) << " ";
+
+	recursion_from_left_to_right(temp);
 }
 
 int main()
@@ -355,8 +383,8 @@ int main()
 	//task_recursion();
 	//task_while_chek_pow2();
 	//task_recursion_chek_pow2();
-	task_recursion_from_right_to_left();
-	//task_recursion_from_left_to_right();
+	//task_recursion_from_right_to_left();
+	task_recursion_from_left_to_right();
 	
 	return 0;
 }
