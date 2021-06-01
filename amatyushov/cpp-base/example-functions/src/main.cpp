@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Math.hpp"
 
+#define maximum(a,b) (((a) > (b)) ? (a) : (b))
+
 namespace my_math
 {
 
@@ -30,15 +32,15 @@ int main()
 	std::cout << "Enter B: ";
 	std::cin >> B;
 
-	if (my_math::max(A, B))
+	/*if (my_math::max(A, B))
 	{
 		std::cout << "A > B" << std::endl;
 	}
 	else
 	{
 		std::cout << "A <= B" << std::endl;
-	}
-
+	}*/
+	std::cout << maximum(A, B) << std::endl;
 	std::cout << "A + B = " << sum(A, B) << std::endl;
 
 	std::cout << "Fib: " << my_math::fib_num(8) << std::endl;

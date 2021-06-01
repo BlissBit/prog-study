@@ -1,38 +1,53 @@
 #include <iostream>
 
-enum types
+enum class types
 {
 	first,
 	second,
 	third
 };
 
+enum class Fruit
+{
+	Banana,
+	Apple,
+	Orange,
+	Peach
+};
+
+
 int main()
 {
 	std::cout << "switch example" << std::endl;
-	const types num = types::first;
-	switch (num)
+	Fruit fruit = Fruit::Orange;
+	switch (fruit)
 	{
-		case types::first:
+		case Fruit::Apple:
 		{
-			 std::cout << "types::first" << std::endl;
+			 std::cout << "Apple" << std::endl;
 		}
 		break;
-		case types::second:
+		case Fruit::Banana:
 		{
-			std::cout << "types::second" << std::endl;
+			std::cout << "Banana" << std::endl;
 		}
 		break;
-		case types::third:
+		case Fruit::Orange:
 		{
-			std::cout << "" << std::endl;
+			std::cout << "Orange" << std::endl;
+		}
+		break;
+		case Fruit::Peach:
+		{
+			std::cout << "Peach" << std::endl;
 		}
 		break;
 		default:
 		{
-			std::cout << "types::third" << std::endl;
+			std::cout << "Unknown fruit" << std::endl;
 		}
 		break;
 	}
+	
 	return 0;
 }
