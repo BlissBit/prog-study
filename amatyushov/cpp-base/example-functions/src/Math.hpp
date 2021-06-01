@@ -8,3 +8,4 @@ int min(int p1, int p2);
 int gcd(int vl, int v2);
 
 }
+
