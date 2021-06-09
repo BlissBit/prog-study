@@ -3,7 +3,7 @@
 int main()
 {
 	int n{}, i{}, a{}, b{}, c{};
-	bool q = 0;
+	bool q{false};
 
 	std::cout << "Enter n = ";
 	std::cin >> n;
