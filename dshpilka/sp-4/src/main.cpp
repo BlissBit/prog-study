@@ -2,15 +2,15 @@
 
 int main()
 {
-	const int SIZE = 100;
-	int arr[SIZE]{}, i{}, n{};
+	const int size = 100;
+	int arr[size]{}, i{}, n{};
 
-	for (i = 0; i < SIZE; i++)
+	for (i = 0; i < size; i++)
 	{
 		arr[i] = rand() % 100;
 	}
 
-	for (i = 0; i < SIZE; i++)
+	for (i = 0; i < size; i++)
 	{
 		std::cout << arr[i] << std::endl;
 	}
