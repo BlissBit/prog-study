@@ -47,7 +47,7 @@ jobs:
             "description": "{{ commit.description }}",
             "url": "{{ commit.url }}",
             "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})",
-            "icon_url": "https://avatars.githubusercontent.com/u/{{ commit.author.id }}"} }'
+            "icon_url": "https://avatars.githubusercontent.com/u/{{ commit.author.email }}"} }'
         last-commit-only: false
 
 
