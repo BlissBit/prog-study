@@ -42,12 +42,8 @@ jobs:
       uses: Sniddl/discord-commits@v1.3
       with:
         webhook: ${{ secrets.discord_webhook_url }}
-        message: "commit to {{github.context.payload.branch}}"
-        embed: '{ "title": "{{ commit.title }}",
-            "description": "{{ commit.description }}",
-            "url": "{{ commit.url }}",
-            "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})",
-            "icon_url": "https://avatars.githubusercontent.com/u/{{ commit.author.id }}"} }'
+        message: "commit to {{ github.context.payload.branch }}"
+        embed: '{ "title": "{{ commit.title }}", "description": "{{ commit.description }}", "url": "{{ commit.url }}", "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})","icon_url": "https://avatars.githubusercontent.com/u/{{ commit.author.id }}"} }'
         last-commit-only: false
 
 
