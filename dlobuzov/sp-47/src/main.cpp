@@ -2,18 +2,16 @@
 using namespace std;
 int main()
 {
-    int num;
+    int num{};
+    cout << "Enter number: ";
+    cin >> num;
+    for (int i = 1; i <= 20; i++)
     {
-        cout << "Enter number: ";
-        cin >> num;
-        for (int i = 1; i <= 20; i++)
-        {
-            cout << num;
-            cout << " * ";
-            cout << i;
-            cout << " = ";
-            cout << num * i << endl;
-        }
+        cout << num;
+        cout << " * ";
+        cout << i;
+        cout << " = ";
+        cout << num * i << endl;
     }
     return 0;
 }
