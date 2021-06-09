@@ -38,14 +38,13 @@ jobs:
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build . --config $BUILD_TYPE
 
-    - name: Discord Commits
-      uses: Sniddl/discord-commits@v1.3
+    - name: Send status to Discord
+      uses: nebularg/actions-discord-webhook@v1
       with:
-        webhook: ${{ secrets.discord_webhook_url }}
-        message: "commit to {{ github.context.payload.branch }}"
-        embed: '{ "title": "{{ commit.title }}", "description": "{{ commit.description }}", "url": "{{ commit.url }}", "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})","icon_url": "https://avatars.githubusercontent.com/u/{{ commit.author.email }}"} }'
-        last-commit-only: false
-
+        webhook_url: ${{ secrets.discord_webhook_url }} # required
+        messege: ""
+        status: ${{ job.status }} # optional, this is the default
+      if: always() # or failure() or success()
 
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
