@@ -38,6 +38,13 @@ jobs:
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build . --config $BUILD_TYPE
 
+    - name: Send status to Discord
+      uses: nebularg/actions-discord-webhook@v1
+      with:
+        webhook_url: ${{ secrets.discord_webhook_url }} # required
+        status: ${{ job.status }} # optional, this is the default
+      if: always() # or failure() or success()
+
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
     #  shell: bash
