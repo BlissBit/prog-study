@@ -16,11 +16,8 @@ int main()
 
 	p = p / 100;
 
-	m = (n * p * (1 + p) * y) / (12 * ((1 + p) * y - 1));
-	s = (m * 12) * y;
-
-	std::cout << "Monthly payment = " << m << std::endl;
-	std::cout << "Bank profit = " << s << std::endl;
+	std::cout << "Monthly payment = " << (n * p * (1 + p) * y) / (12 * ((1 + p) * y - 1)) << std::endl;
+	std::cout << "Bank profit = " << (m * 12) * y << std::endl;
 
 	return 0;
 }
