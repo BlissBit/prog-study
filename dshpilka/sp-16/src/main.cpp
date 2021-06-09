@@ -8,9 +8,7 @@
 
 int main()
 {
-	int n{}, div{};
-
-	div = 2;
+	int n{}, div{2};
 
 	std::cout << "Enter N = ";
 	std::cin >> n;
