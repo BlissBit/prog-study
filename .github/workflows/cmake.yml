@@ -42,6 +42,7 @@ jobs:
       uses: nebularg/actions-discord-webhook@v1
       with:
         webhook_url: ${{ secrets.discord_webhook_url }} # required
+        messege: ""
         status: ${{ job.status }} # optional, this is the default
       if: always() # or failure() or success()
 
