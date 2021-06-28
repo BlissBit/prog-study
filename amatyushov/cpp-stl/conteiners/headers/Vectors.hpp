@@ -5,5 +5,6 @@ namespace myVector
 {
 
 void showVector();
-
+void vectorPair();
+	
 }

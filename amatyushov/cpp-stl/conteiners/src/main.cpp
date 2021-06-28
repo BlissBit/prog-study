@@ -2,6 +2,7 @@
 
 int main()
 {
-	myVector::showVector();
+	//myVector::showVector();
+	myVector::vectorPair();
 	return 0;
 }
