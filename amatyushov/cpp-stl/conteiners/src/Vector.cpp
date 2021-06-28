@@ -80,7 +80,5 @@ void vectorPair()
 	
 	std::cout << "min dist = " << min_dins_main <<	std::endl;
 }
-
-
 	
 }
