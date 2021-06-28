@@ -1,18 +1,12 @@
 #include <iostream>
 #include <cmath>
-
-/// <summary>
-/// Задать в ручную один двумерный массив с координатами x и y, которые задают координаты n точек на
-/// плоскости.Найти наиболее близкие друг другу точки.
-/// </summary>
+#include <limits>
 
 int main()
 {
 	const int n = 5;
 	const int COL = 2;
-	int i{}, j{};
-	int temp{}, A{}, B{}, C{}, D{}, E{};
-	int Distance_AB{}, Distance_BC{}, Distance_CD{}, Distance_DE{};
+	int i{}, j{}, min_dist_temp{}, min_dist_main{ std::numeric_limits<int>::max() };
 
 	int arr[n][COL];
 
@@ -33,46 +27,31 @@ int main()
 		std::cout << std::endl;
 	}
 
-	int x1 = arr[0][0];
-	int y1 = arr[0][1];
-
-	int x2 = arr[1][0];
-	int y2 = arr[1][1];
-
-	int x3 = arr[2][0];
-	int y3 = arr[2][1];
-
-	int x4 = arr[3][0];
-	int y4 = arr[3][1];
-
-	int x5 = arr[4][0];
-	int y5 = arr[4][1];
-
-	Distance_AB = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
-	Distance_BC = sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2));
-	Distance_CD = sqrt(pow((x4 - x3), 2) + pow((y4 - y3), 2));
-	Distance_DE = sqrt(pow((x5 - x4), 2) + pow((y5 - y4), 2));
-
-	if (Distance_AB > Distance_BC)
+	for (i = 0; i < n; i++)
 	{
-		temp = Distance_BC;
-	}
-	else
-	{
-		temp = Distance_AB;
-	}
-	
-	if (temp > Distance_CD)
-	{
-		temp = Distance_CD;
-	}
-	
-	if (temp > Distance_DE)
-	{
-		temp = Distance_DE;
-	}
+		const int xcurr = arr[i][0];
+		const int ycurr = arr[i][1];
 
-	std::cout << "points closest to each other = " << temp << std::endl;
+		for (j = 0; j < n; j++)
+		{
+			const int xn = arr[j][0];
+			const int yn = arr[j][1];
+
+			if (i != j)
+			{
+				const int min_dist_temp = sqrt(pow((xn - xcurr), 2) + pow((yn - ycurr), 2));
+
+				std::cout << "min_dist_temp " << min_dist_temp << std::endl;
+
+				if (min_dist_temp < min_dist_main)
+				{
+					min_dist_main = min_dist_temp;
+				}
+			}
+		}
+	}
+	std::cout << std::endl;
+	std::cout << "min_dist_main " << min_dist_main << std::endl;
 
 	return 0;
 }
