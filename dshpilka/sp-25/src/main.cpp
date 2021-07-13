@@ -1,20 +1,29 @@
 #include <iostream>
 #include <cmath>
 #include <limits>
+#include <iomanip>
 
 int main()
 {
-	const int n = 5;
-	const int COL = 2;
-	int i{}, j{}, min_dist_temp{}, min_dist_main{ std::numeric_limits<int>::max() };
+	int COL{}, n{}, i{}, j{}, min_dist_temp{}, min_dist_main{ std::numeric_limits<int>::max() };
 
-	int arr[n][COL];
+	std::cout << "Enter n = " << std::endl;
+	std::cin >> n;
+
+	std::cout << "Enter COL = " << std::endl;
+	std::cin >> COL;
+
+	int** ptrarr = new int* [n];
+	for ( i = 0; i < n; i++)
+	{
+		ptrarr[i] = new int[COL];
+	}
 
 	for (i = 0; i < n; i++)
 	{
 		for (j = 0; j < COL; j++)
 		{
-			arr[i][j] = rand() % 25;
+			ptrarr[i][j] = rand() % 25;
 		}
 	}
 
@@ -22,20 +31,20 @@ int main()
 	{
 		for (j = 0; j < COL; j++)
 		{
-			std::cout << arr[i][j] << "\t";
+			std::cout << std::setw(3) << ptrarr[i][j] << "\t";
 		}
 		std::cout << std::endl;
 	}
 
 	for (i = 0; i < n; i++)
 	{
-		const int xcurr = arr[i][0];
-		const int ycurr = arr[i][1];
+		const int xcurr = ptrarr[i][0];
+		const int ycurr = ptrarr[i][1];
 
 		for (j = 0; j < n; j++)
 		{
-			const int xn = arr[j][0];
-			const int yn = arr[j][1];
+			const int xn = ptrarr[j][0];
+			const int yn = ptrarr[j][1];
 
 			if (i != j)
 			{
@@ -52,6 +61,13 @@ int main()
 	}
 	std::cout << std::endl;
 	std::cout << "min_dist_main " << min_dist_main << std::endl;
+	
+	for (i = 0; i < n; i++)
+	{
+		delete ptrarr[i];
+	}
+
+	delete[] ptrarr;
 
 	return 0;
 }
